@@ -1,0 +1,4 @@
+:root{--bg:#eef1f4;--surface:#fff;--ink:#14202b;--muted:#5d6b78;--line:#d3dae1;--accent:#0b6e6a;--accent-ink:#fff;
+--ok:#1d7a46;--bad:#b3261e;--warn:#8a6100;
+--sans:system-ui,-apple-system,"Segoe UI",sans-serif;--mono:ui-monospace,Menlo,Consolas,"DejaVu Sans Mono",monospace;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--bg:#0d171e;--surface:#142029;--ink:#e6edf2;--muted:#97a6b3;--line:#263642;--accent:#4fd1c5;--accent-ink:#06201d;--ok:#5fcf8c;--bad:#ff8a80;--warn:#e6b84d}}

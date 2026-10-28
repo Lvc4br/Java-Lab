@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Java Lab</title>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#/">Java Lab</a><span class="muted">Exercícios Java da Etec, direto no navegador</span></header>
+<main>
+  <section id="library">
+    <div class="tools">
+      <input id="q" type="search" placeholder="Buscar exercício" aria-label="Buscar exercício">
+      <select id="list" aria-label="Filtrar por lista"><option value="">Todas as listas</option></select>
+    </div>
+    <p id="count" class="muted" aria-live="polite">Carregando catálogo…</p>
+    <ul id="grid" class="grid"></ul>
+  </section>
+  <section id="workspace" hidden>
+    <div class="bar">
+      <a href="#/">Voltar à biblioteca</a>
+      <h1 id="title"></h1>
+      <div class="actions">
+        <button id="reset" type="button">Restaurar original</button>
+        <button id="run" type="button" class="primary">Executar</button>
+      </div>
+    </div>
+    <div class="panes">
+      <div class="pane"><label for="code">Código</label><textarea id="code" spellcheck="false" autocomplete="off"></textarea></div>
+      <div class="pane">
+        <label for="stdin">Entrada (um valor por linha)</label><textarea id="stdin" class="short" spellcheck="false"></textarea>
+        <label for="out">Saída</label><pre id="out" tabindex="0"></pre>
+        <label for="err">Erros</label><pre id="err" tabindex="0"></pre>
+        <p id="status" class="status" role="status"></p>
+      </div>
+    </div>
+  </section>
+</main>
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
