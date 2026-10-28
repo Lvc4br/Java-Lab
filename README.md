@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Java Lab
 
 Biblioteca web estática para abrir, editar e executar os exercícios Java de
@@ -84,3 +85,6 @@ export const CONFIG = {
 ## Segurança
 
 Ver `docs/security.md`. Nenhuma chave privada no frontend. Código dos alunos executa só no sandbox do Judge0.
+=======
+# Java-Lab
+>>>>>>> origin/main
