@@ -1,0 +1,17 @@
+{
+  "name": "java-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "catalog": "node scripts/build-catalog.mjs",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vite": "^6.4.5",
+    "vitest": "^5.0.5"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}

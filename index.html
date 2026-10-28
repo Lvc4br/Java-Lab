@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Java Lab</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#/">Java Lab</a>
+    <span class="muted">Exercícios Java da Etec · execução no navegador</span>
+  </header>
+
+  <main>
+    <!-- Biblioteca -->
+    <section id="library">
+      <div class="tools">
+        <input id="q" type="search" placeholder="Buscar exercício…" aria-label="Buscar exercício">
+        <select id="list" aria-label="Filtrar por lista">
+          <option value="">Todas as listas</option>
+        </select>
+      </div>
+      <p id="count" class="muted" aria-live="polite">Carregando catálogo…</p>
+      <ul id="grid" class="grid"></ul>
+    </section>
+
+    <!-- Workspace (estilo VS Code) -->
+    <section id="workspace" hidden>
+      <div class="bar">
+        <a href="#/">← Biblioteca</a>
+        <h1 id="title"></h1>
+        <div class="actions">
+          <button id="reset" type="button" title="Descarta alterações e volta ao código original">Restaurar</button>
+          <button id="run" type="button" class="primary" title="Compilar e executar (Ctrl+Enter)">▶ Executar</button>
+        </div>
+      </div>
+
+      <div class="workspace-body">
+        <!-- Editor -->
+        <div class="editor-pane">
+          <div class="editor-header">
+            <span class="file-name" id="file-label">Main.java</span>
+            <span class="muted">· editável</span>
+          </div>
+          <textarea id="code" spellcheck="false" autocomplete="off" aria-label="Código-fonte Java"></textarea>
+        </div>
+
+        <!-- Painel lateral: entrada + terminal -->
+        <div class="side-pane">
+          <div class="input-block">
+            <div class="label-row">
+              <span>Entrada (stdin)</span>
+              <span class="hint">um valor por linha · enviado antes da execução</span>
+            </div>
+            <textarea id="stdin" spellcheck="false" placeholder="Ex.&#10;5&#10;3" aria-label="Dados de entrada"></textarea>
+          </div>
+
+          <div class="terminal-panel">
+            <div class="panel-tabs" role="tablist">
+              <button type="button" class="panel-tab active" data-tab="terminal" role="tab" aria-selected="true">
+                Terminal
+              </button>
+              <button type="button" class="panel-tab" data-tab="problems" role="tab" aria-selected="false">
+                Problems
+                <span class="badge" id="problems-badge" hidden>0</span>
+              </button>
+              <div class="panel-actions">
+                <button type="button" id="clear-term" title="Limpar terminal">Limpar</button>
+              </div>
+            </div>
+
+            <div class="panel-body">
+              <!-- Terminal view -->
+              <div class="panel-view active" id="view-terminal" role="tabpanel">
+                <div class="term-scroll" id="term-scroll">
+                  <pre id="out" class="term-out" aria-live="polite"></pre>
+                  <pre id="err" class="term-err" aria-live="polite"></pre>
+                </div>
+              </div>
+
+              <!-- Problems view -->
+              <div class="panel-view" id="view-problems" role="tabpanel" hidden>
+                <ul class="problems-list" id="problems-list"></ul>
+                <p class="problems-empty" id="problems-empty">Nenhum problema detectado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status bar -->
+      <div class="status-bar" role="status">
+        <div class="status-left">
+          <span class="kind" id="status" data-kind="">Pronto</span>
+          <span class="detail" id="status-detail"></span>
+        </div>
+        <div class="status-right">
+          <span class="lang">Java 17</span>
+          <span class="lang" id="status-time"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

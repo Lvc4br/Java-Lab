@@ -1,0 +1,79 @@
+/* Tokens inspirados no Visual Studio Code (Dark+) */
+:root {
+  /* Surfaces */
+  --bg: #1e1e1e;
+  --surface: #252526;
+  --surface-2: #2d2d2d;
+  --editor: #1e1e1e;
+  --sidebar: #252526;
+  --panel: #1e1e1e;
+  --titlebar: #3c3c3c;
+  --statusbar: #007acc;
+
+  /* Text */
+  --ink: #d4d4d4;
+  --ink-bright: #ffffff;
+  --muted: #858585;
+  --dim: #6a6a6a;
+
+  /* Borders & lines */
+  --line: #3c3c3c;
+  --line-soft: #2b2b2b;
+  --focus: #007acc;
+
+  /* Accent / actions */
+  --accent: #0e639c;
+  --accent-hover: #1177bb;
+  --accent-ink: #ffffff;
+  --run: #0e639c;
+  --run-hover: #1177bb;
+
+  /* Semantic */
+  --ok: #4ec9b0;
+  --bad: #f48771;
+  --warn: #dcdcaa;
+  --info: #9cdcfe;
+
+  /* Tabs */
+  --tab-active: #1e1e1e;
+  --tab-inactive: #2d2d2d;
+  --tab-border: #007acc;
+
+  /* Fonts */
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --mono: "Cascadia Code", "Fira Code", "JetBrains Mono", Consolas, "Courier New", monospace;
+
+  color-scheme: dark;
+}
+
+/* Fallback claro caso o usuário force light (raro neste projeto) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f3f3f3;
+    --surface: #ffffff;
+    --surface-2: #f8f8f8;
+    --editor: #ffffff;
+    --sidebar: #f3f3f3;
+    --panel: #ffffff;
+    --titlebar: #dddddd;
+    --statusbar: #007acc;
+    --ink: #333333;
+    --ink-bright: #000000;
+    --muted: #6a6a6a;
+    --dim: #999999;
+    --line: #e0e0e0;
+    --line-soft: #ececec;
+    --focus: #007acc;
+    --accent: #0e639c;
+    --accent-hover: #1177bb;
+    --accent-ink: #ffffff;
+    --ok: #388a34;
+    --bad: #c72e0f;
+    --warn: #b89500;
+    --info: #0070c1;
+    --tab-active: #ffffff;
+    --tab-inactive: #f3f3f3;
+    --tab-border: #007acc;
+    color-scheme: light;
+  }
+}

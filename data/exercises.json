@@ -1,0 +1,429 @@
+{
+  "generatedAt": "2026-10-28T16:24:56.666Z",
+  "source": {
+    "repo": "Lvc4br/ETEC-Desenvolvimento-de-Sistemas",
+    "branch": "main"
+  },
+  "exercises": [
+    {
+      "id": "java-listaa-a1",
+      "title": "A1",
+      "list": "listaA",
+      "sourcePath": "java/listaA/A1.java",
+      "mainClass": "A1",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaa-a2",
+      "title": "A2",
+      "list": "listaA",
+      "sourcePath": "java/listaA/A2.java",
+      "mainClass": "A2",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaa-a3",
+      "title": "A3",
+      "list": "listaA",
+      "sourcePath": "java/listaA/A3.java",
+      "mainClass": "A3",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaa-a4",
+      "title": "A4",
+      "list": "listaA",
+      "sourcePath": "java/listaA/A4.java",
+      "mainClass": "A4",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaa-a5",
+      "title": "A5",
+      "list": "listaA",
+      "sourcePath": "java/listaA/A5.java",
+      "mainClass": "A5",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaa-a6",
+      "title": "A6",
+      "list": "listaA",
+      "sourcePath": "java/listaA/A6.java",
+      "mainClass": "A6",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaa-a7",
+      "title": "A7",
+      "list": "listaA",
+      "sourcePath": "java/listaA/A7.java",
+      "mainClass": "A7",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaa-a8",
+      "title": "A8",
+      "list": "listaA",
+      "sourcePath": "java/listaA/A8.java",
+      "mainClass": "A8",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaaextra2-a1",
+      "title": "A1",
+      "list": "listaAExtra2",
+      "sourcePath": "java/listaAExtra2/A1.java",
+      "mainClass": "A1",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaaextra2-a2",
+      "title": "A2",
+      "list": "listaAExtra2",
+      "sourcePath": "java/listaAExtra2/A2.java",
+      "mainClass": "A2",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaaextra2-a3",
+      "title": "A3",
+      "list": "listaAExtra2",
+      "sourcePath": "java/listaAExtra2/A3.java",
+      "mainClass": "A3",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaaextra2-a4",
+      "title": "A4",
+      "list": "listaAExtra2",
+      "sourcePath": "java/listaAExtra2/A4.java",
+      "mainClass": "A4",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaaextra2-a5",
+      "title": "A5",
+      "list": "listaAExtra2",
+      "sourcePath": "java/listaAExtra2/A5.java",
+      "mainClass": "A5",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaaextra2-a6",
+      "title": "A6",
+      "list": "listaAExtra2",
+      "sourcePath": "java/listaAExtra2/A6.java",
+      "mainClass": "A6",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaaextra2-a7",
+      "title": "A7",
+      "list": "listaAExtra2",
+      "sourcePath": "java/listaAExtra2/A7.java",
+      "mainClass": "A7",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaaextra2-a8",
+      "title": "A8",
+      "list": "listaAExtra2",
+      "sourcePath": "java/listaAExtra2/A8.java",
+      "mainClass": "A8",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaaextra2-a9",
+      "title": "A9",
+      "list": "listaAExtra2",
+      "sourcePath": "java/listaAExtra2/A9.java",
+      "mainClass": "A9",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listad-d1",
+      "title": "D1",
+      "list": "listaD",
+      "sourcePath": "java/listaD/D1.java",
+      "mainClass": "D1",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listad-d2",
+      "title": "D2",
+      "list": "listaD",
+      "sourcePath": "java/listaD/D2.java",
+      "mainClass": "D2",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listad-d3",
+      "title": "D3",
+      "list": "listaD",
+      "sourcePath": "java/listaD/D3.java",
+      "mainClass": "D3",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listad-d4",
+      "title": "D4",
+      "list": "listaD",
+      "sourcePath": "java/listaD/D4.java",
+      "mainClass": "D4",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listad-d5",
+      "title": "D5",
+      "list": "listaD",
+      "sourcePath": "java/listaD/D5.java",
+      "mainClass": "D5",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listad-d6",
+      "title": "D6",
+      "list": "listaD",
+      "sourcePath": "java/listaD/D6.java",
+      "mainClass": "D6",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listad-d7",
+      "title": "D7",
+      "list": "listaD",
+      "sourcePath": "java/listaD/D7.java",
+      "mainClass": "D7",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listad-d8",
+      "title": "D8",
+      "list": "listaD",
+      "sourcePath": "java/listaD/D8.java",
+      "mainClass": "D8",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listad-d9",
+      "title": "D9",
+      "list": "listaD",
+      "sourcePath": "java/listaD/D9.java",
+      "mainClass": "D9",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaextra-a1",
+      "title": "A1",
+      "list": "listaExtra",
+      "sourcePath": "java/listaExtra/A1.java",
+      "mainClass": "A1",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaextra-a2",
+      "title": "A2",
+      "list": "listaExtra",
+      "sourcePath": "java/listaExtra/A2.java",
+      "mainClass": "A2",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaextra-a3",
+      "title": "A3",
+      "list": "listaExtra",
+      "sourcePath": "java/listaExtra/A3.java",
+      "mainClass": "A3",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaextra-a4",
+      "title": "A4",
+      "list": "listaExtra",
+      "sourcePath": "java/listaExtra/A4.java",
+      "mainClass": "A4",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaextra-a5",
+      "title": "A5",
+      "list": "listaExtra",
+      "sourcePath": "java/listaExtra/A5.java",
+      "mainClass": "A5",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaextra-a6",
+      "title": "A6",
+      "list": "listaExtra",
+      "sourcePath": "java/listaExtra/A6.java",
+      "mainClass": "A5",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": false
+    },
+    {
+      "id": "java-listaf-f1",
+      "title": "F1",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F1.java",
+      "mainClass": "F1",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaf-f10",
+      "title": "F10",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F10.java",
+      "mainClass": "F10",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaf-f2",
+      "title": "F2",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F2.java",
+      "mainClass": "F2",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaf-f3",
+      "title": "F3",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F3.java",
+      "mainClass": "F3",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaf-f4",
+      "title": "F4",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F4.java",
+      "mainClass": "F4",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaf-f5",
+      "title": "F5",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F5.java",
+      "mainClass": "F5",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaf-f6",
+      "title": "F6",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F6.java",
+      "mainClass": "F6",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaf-f7",
+      "title": "F7",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F7.java",
+      "mainClass": "F7",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaf-f8",
+      "title": "F8",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F8.java",
+      "mainClass": "F8",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    },
+    {
+      "id": "java-listaf-f9",
+      "title": "F9",
+      "list": "listaF",
+      "sourcePath": "java/listaF/F9.java",
+      "mainClass": "F9",
+      "runnable": true,
+      "usesScanner": true,
+      "hasPackage": true
+    }
+  ]
+}
