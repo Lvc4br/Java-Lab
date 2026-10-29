@@ -7,13 +7,15 @@ Biblioteca web estática para consultar, editar e executar cópias dos exercíci
 ```mermaid
 flowchart TD
     A[index.html] --> B[assets/js/app.js]
-    B --> C[catalog.js + data/exercises.json]
-    B --> D[editor.js]
-    D --> E[runner.js]
-    E --> F[api-client.js]
-    F --> G[Judge0 CE external]
-    G --> H[console.js: output and errors]
-    I[scripts/build-catalog.mjs] --> C
+    B --> C[assets/js/catalog.js]
+    C --> D[data/exercises.json]
+    B --> E[editor.js]
+    E --> F[runner.js]
+    F --> G[api-client.js]
+    G --> H[Judge0 CE external]
+    H --> I[console.js: output and errors]
+    J[scripts/build-catalog.mjs] --> D
+    K[ETEC-Desenvolvimento-de-Sistemas] --> J
 ```
 
 ### Modelo de domínio
