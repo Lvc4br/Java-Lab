@@ -1,25 +1,26 @@
-# Java Lab
+# Java Lab — Aplicação web
 
-Biblioteca web estática para abrir, editar e executar os exercícios Java de
-[ETEC-Desenvolvimento-de-Sistemas](https://github.com/Lvc4br/ETEC-Desenvolvimento-de-Sistemas).
-A interface fica no GitHub Pages; a compilação e a execução ficam em um executor externo.
+Esta pasta contém a aplicação web de biblioteca de exercícios Java. Ela é parte do repositório principal [Lvc4br/Java-Lab](https://github.com/Lvc4br/Java-Lab), que deve ser consultado para o README de referência e o estado geral do projeto.
 
-## Rodar localmente
-```
+## Executar localmente
+
+Na pasta que contém o `package.json`:
+
+```bash
 npm install
-npm run catalog   # gera data/exercises.json a partir do repositório de exercícios
-npm run dev       # servidor local (módulos ES exigem http, não file://)
+npm run catalog
+npm run dev
 npm test
 ```
 
-## Como funciona
-catálogo (`data/exercises.json`) → editor (código carregado do repositório original) → `runner.js`
-(limites, adaptação para `Main.java`) → `api-client.js` (POST ao executor, API do Judge0) → console (saída, erros, status).
+Use o endereço local mostrado pelo Vite. Os módulos JavaScript precisam ser servidos por HTTP; abrir o HTML diretamente como arquivo não é suportado.
 
-- A entrada (stdin) é enviada antes da execução, um valor por linha.
-- Se o código tem outra classe pública ou `package`, o envio é adaptado e o console informa a adaptação. O original não muda.
-- Sem `executor.endpoint` em `assets/js/config.js`, a execução responde "Executor não configurado". Não existe saída simulada.
+## Fluxo de execução
 
-## Estado
-Pronto: catálogo, biblioteca com busca e filtro, editor com restaurar original, console, cliente e testes de runner e catálogo.
-Falta: escolher e validar o executor (Etapa 3), trocar o textarea por CodeMirror 6, segurança e responsividade finas, publicação.
+O catálogo lista os exercícios do repositório [ETEC-Desenvolvimento-de-Sistemas](https://github.com/Lvc4br/ETEC-Desenvolvimento-de-Sistemas). O usuário pode editar uma cópia no navegador, e o código é enviado a um executor externo configurado em `assets/js/config.js`.
+
+- A entrada padrão (`stdin`) é enviada antes de iniciar a execução.
+- A adaptação necessária para o executor não altera o arquivo original do exercício.
+- Sem um executor configurado, a aplicação informa que a execução não está disponível; não simula resultados.
+
+Consulte o README principal do repositório para limitações, segurança e configuração atualizadas.
