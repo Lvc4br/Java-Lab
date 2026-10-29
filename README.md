@@ -39,11 +39,13 @@ Execute os comandos na raiz. Abra o endereço mostrado pelo Vite, normalmente `h
 
 A configuração da raiz usa `https://ce.judge0.com`, language ID `91` (Java JDK 17), timeout de 20 segundos, limite de 50.000 bytes de código, limite de 5.000 bytes de stdin e intervalo mínimo de 3 segundos entre execuções. O serviço público pode impor limites ou ficar indisponível. A entrada é pré-enviada; não há terminal interativo.
 
-## Cópia adicional
+## Cópia adicional e decisão de manutenção
 
-Existe outra aplicação independente em `java-lab/`, com seu próprio `package.json`, configuração, catálogo e testes. Nessa cópia o endpoint do executor está vazio por padrão, portanto ela não executa até ser configurada. Este README descreve a aplicação da raiz. Recomenda-se comparar as duas versões e decidir qual será mantida como canônica.
+Existe outra aplicação independente em `java-lab/`, com seu próprio `package.json`, configuração, catálogo e testes. Nessa cópia o endpoint do executor está vazio por padrão, portanto ela não executa até ser configurada. **A aplicação da raiz é a versão canônica recomendada** porque é a documentada e já contém a configuração do executor. A cópia `java-lab/` foi preservada nesta etapa para evitar apagar código sem comparar funcionalidade e histórico; antes de removê-la, compare diferenças e migre qualquer melhoria exclusiva para a raiz.
 
 ## Testes e limites
+
+O workflow `.github/workflows/ci.yml` instala dependências, gera o catálogo e executa os testes da aplicação da raiz em pushes e pull requests. O resultado só pode ser considerado validado depois que o GitHub Actions concluir uma execução.
 
 Os testes existentes cobrem partes do catálogo e do runner, não garantem a disponibilidade do serviço remoto. Não envie código sensível ao executor público. A pasta `backend/` contém apenas documentação de uma possível camada intermediária, não um servidor implementado.
 
