@@ -1,8 +1,17 @@
-@"
+# Dependencies and generated output
 node_modules/
+java-lab/node_modules/
 dist/
+java-lab/dist/
+coverage/
+java-lab/coverage/
+
+# Environment files (keep examples)
 .env
 .env.*
 !.env.example
-coverage/
-"@ | Set-Content .gitignore
+
+# Logs and local artifacts
+*.log
+.DS_Store
+Thumbs.db
