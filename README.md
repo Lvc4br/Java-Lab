@@ -4,6 +4,20 @@ Biblioteca web estática para consultar, editar e executar cópias dos exercíci
 
 ## Arquitetura
 
+## Arquitetura
+
+```mermaid
+flowchart TD
+    A[index.html] --> B[assets/js/app.js]
+    B --> C[catalog.js + data/exercises.json]
+    B --> D[editor.js]
+    D --> E[runner.js]
+    E --> F[api-client.js]
+    F --> G[Judge0 CE external]
+    G --> H[console.js: output and errors]
+    I[scripts/build-catalog.mjs] --> C
+```
+
 `index.html` carrega os módulos em `assets/js/`: `app.js` coordena a interface; `catalog.js` lê e filtra os exercícios; `editor.js` permite alterar uma cópia do código; `runner.js` adapta o código e aplica limites; `api-client.js` chama o executor; `console.js` apresenta a saída e os erros; `router.js` controla a navegação. `data/exercises.json` é gerado por `scripts/build-catalog.mjs`.
 
 Fluxo: catálogo → código original carregado do GitHub → edição local → adaptação → envio ao Judge0 CE → resultado no painel. O código editado não altera o arquivo original.
