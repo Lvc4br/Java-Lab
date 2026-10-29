@@ -1,5 +1,9 @@
-# Backend (opcional)
+# Backend opcional
 
-Só é necessário se o executor escolhido exigir chave de API. Nesse caso, o frontend chama uma função serverless
-que guarda a chave em variável de ambiente, aplica os limites de `docs/security.md` e repassa a requisição ao executor.
-Aponte `executor.endpoint` em `assets/js/config.js` para essa função.
+Este arquivo documenta uma alternativa futura; não há código de servidor neste diretório.
+
+O cliente Java Lab usa atualmente um executor externo. Só adicione uma API intermediária se o serviço exigir uma credencial privada. Essa API deve proteger a credencial no ambiente do servidor e validar as requisições.
+
+A configuração do endpoint no cliente, a implementação e os testes ainda precisam ser realizados antes de considerar esse backend disponível.
+
+Consulte o README principal para o fluxo de execução atual.
