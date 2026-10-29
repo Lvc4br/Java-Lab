@@ -61,6 +61,6 @@ A aplicação da raiz é a única versão canônica. A cópia antiga `java-lab/`
 
 O workflow `.github/workflows/ci.yml` instala dependências, gera o catálogo e executa os testes da aplicação da raiz em pushes e pull requests. O resultado só pode ser considerado validado depois que o GitHub Actions concluir uma execução.
 
-Os testes existentes cobrem partes do catálogo e do runner, não garantem a disponibilidade do serviço remoto. Não envie código sensível ao executor público. A pasta `backend/` contém apenas documentação de uma possível camada intermediária, não um servidor implementado.
+Os testes cobrem validação/filtro do catálogo, adaptação e interpretação do runner e comportamento do cliente Judge0 (codificação UTF-8/base64, endpoint ausente e erros HTTP). Eles não garantem a disponibilidade do serviço remoto nem substituem testes de integração com uma instância controlada. Não envie código sensível ao executor público. A pasta `backend/` contém apenas documentação de uma possível camada intermediária, não um servidor implementado.
 
 **Autor:** Luca Toniolo — [@Lvc4br](https://github.com/Lvc4br)
