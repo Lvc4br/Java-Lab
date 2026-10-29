@@ -4,8 +4,6 @@ Biblioteca web estática para consultar, editar e executar cópias dos exercíci
 
 ## Arquitetura
 
-## Arquitetura
-
 ```mermaid
 flowchart TD
     A[index.html] --> B[assets/js/app.js]
@@ -17,6 +15,22 @@ flowchart TD
     G --> H[console.js: output and errors]
     I[scripts/build-catalog.mjs] --> C
 ```
+
+### Modelo de domínio
+
+```mermaid
+flowchart TD
+    A[Catálogo gerado] --> B[Exercício]
+    B --> C[Metadados: lista, caminho, classe principal]
+    B --> D[Código original remoto]
+    D --> E[Cópia editável no navegador]
+    E --> F[Pedido de execução: código + stdin]
+    F --> G[Judge0 CE]
+    G --> H[Resultado transitório: stdout, stderr, compilação, status]
+```
+
+O ator é um visitante anônimo; não há conta, inventário, banco de dados de submissões ou histórico persistente. A lista/categoria vem do caminho do arquivo. O código editado e o resultado pertencem à sessão da interface e não alteram o repositório de exercícios.
+
 
 `index.html` carrega os módulos em `assets/js/`: `app.js` coordena a interface; `catalog.js` lê e filtra os exercícios; `editor.js` permite alterar uma cópia do código; `runner.js` adapta o código e aplica limites; `api-client.js` chama o executor; `console.js` apresenta a saída e os erros; `router.js` controla a navegação. `data/exercises.json` é gerado por `scripts/build-catalog.mjs`.
 
@@ -39,9 +53,9 @@ Execute os comandos na raiz. Abra o endereço mostrado pelo Vite, normalmente `h
 
 A configuração da raiz usa `https://ce.judge0.com`, language ID `91` (Java JDK 17), timeout de 20 segundos, limite de 50.000 bytes de código, limite de 5.000 bytes de stdin e intervalo mínimo de 3 segundos entre execuções. O serviço público pode impor limites ou ficar indisponível. A entrada é pré-enviada; não há terminal interativo.
 
-## Cópia adicional e decisão de manutenção
+## Consolidação da aplicação
 
-Existe outra aplicação independente em `java-lab/`, com seu próprio `package.json`, configuração, catálogo e testes. Nessa cópia o endpoint do executor está vazio por padrão, portanto ela não executa até ser configurada. **A aplicação da raiz é a versão canônica recomendada** porque é a documentada e já contém a configuração do executor. A cópia `java-lab/` foi preservada nesta etapa para evitar apagar código sem comparar funcionalidade e histórico; antes de removê-la, compare diferenças e migre qualquer melhoria exclusiva para a raiz.
+A aplicação da raiz é a única versão canônica. A cópia antiga `java-lab/` tinha interface e cliente HTTP mais simples, endpoint vazio, sem lockfile próprio e testes duplicados. As funcionalidades mais completas da raiz — layout, tratamento de erros e codificação UTF-8/base64 para o Judge0 — foram preservadas. A cópia redundante foi removida para evitar divergência de configuração e manutenção dupla.
 
 ## Testes e limites
 
