@@ -1,17 +1,16 @@
 # Java Lab
 
-Biblioteca web estática para consultar, editar e executar os exercícios Java do repositório [ETEC-Desenvolvimento-de-Sistemas](https://github.com/Lvc4br/ETEC-Desenvolvimento-de-Sistemas).
+Biblioteca web estática para consultar, editar e executar cópias dos exercícios Java de [ETEC-Desenvolvimento-de-Sistemas](https://github.com/Lvc4br/ETEC-Desenvolvimento-de-Sistemas). A aplicação principal fica na raiz do repositório.
 
-A interface é inspirada em um editor de código, com área de edição, painel de saída e lista de erros. A compilação e a execução são enviadas ao serviço externo **Judge0 CE**; o projeto não mantém um servidor próprio de execução.
+## Arquitetura
 
-## Requisitos
+`index.html` carrega os módulos em `assets/js/`: `app.js` coordena a interface; `catalog.js` lê e filtra os exercícios; `editor.js` permite alterar uma cópia do código; `runner.js` adapta o código e aplica limites; `api-client.js` chama o executor; `console.js` apresenta a saída e os erros; `router.js` controla a navegação. `data/exercises.json` é gerado por `scripts/build-catalog.mjs`.
 
-- Node.js e npm
-- Conexão com a internet para carregar exercícios do GitHub e usar o Judge0 CE
+Fluxo: catálogo → código original carregado do GitHub → edição local → adaptação → envio ao Judge0 CE → resultado no painel. O código editado não altera o arquivo original.
 
-## Executar localmente
+## Executar
 
-Na raiz do projeto:
+Requisitos: Node.js, npm e internet.
 
 ```bash
 npm install
@@ -20,31 +19,18 @@ npm run dev
 npm test
 ```
 
-Abra o endereço local exibido pelo Vite, normalmente `http://127.0.0.1:5173`.
+Execute os comandos na raiz. Abra o endereço mostrado pelo Vite, normalmente `http://127.0.0.1:5173`. Os módulos precisam ser servidos por HTTP.
 
-## Como funciona
+## Executor
 
-1. O catálogo `data/exercises.json` é gerado a partir do repositório de exercícios.
-2. O código original é carregado do GitHub.
-3. O usuário pode editar uma cópia no navegador; o arquivo original não é alterado.
-4. O executor adapta o código para o formato esperado pelo Judge0 e envia a execução ao serviço.
-5. O resultado é apresentado no painel de saída.
+A configuração da raiz usa `https://ce.judge0.com`, language ID `91` (Java JDK 17), timeout de 20 segundos, limite de 50.000 bytes de código, limite de 5.000 bytes de stdin e intervalo mínimo de 3 segundos entre execuções. O serviço público pode impor limites ou ficar indisponível. A entrada é pré-enviada; não há terminal interativo.
 
-A entrada padrão (`stdin`) é enviada antes da execução; não é um terminal interativo em tempo real.
+## Cópia adicional
 
-## Atalhos
+Existe outra aplicação independente em `java-lab/`, com seu próprio `package.json`, configuração, catálogo e testes. Nessa cópia o endpoint do executor está vazio por padrão, portanto ela não executa até ser configurada. Este README descreve a aplicação da raiz. Recomenda-se comparar as duas versões e decidir qual será mantida como canônica.
 
-- **Ctrl+Enter** (ou **Cmd+Enter** no macOS): executar o código.
+## Testes e limites
 
-## Limitações
-
-- O serviço público Judge0 CE pode apresentar limites de uso ou indisponibilidade.
-- A entrada é pré-enviada, sem interação durante a execução.
-- O editor é baseado em textarea e pode não oferecer realce de sintaxe completo.
-- A aplicação depende de serviços externos e não deve ser usada para executar código sensível.
-
-## Projeto relacionado
-
-O conteúdo de exercícios é mantido em [ETEC-Desenvolvimento-de-Sistemas](https://github.com/Lvc4br/ETEC-Desenvolvimento-de-Sistemas).
+Os testes existentes cobrem partes do catálogo e do runner, não garantem a disponibilidade do serviço remoto. Não envie código sensível ao executor público. A pasta `backend/` contém apenas documentação de uma possível camada intermediária, não um servidor implementado.
 
 **Autor:** Luca Toniolo — [@Lvc4br](https://github.com/Lvc4br)
